@@ -1,17 +1,3 @@
-# 作者: 筱可
-# 日期: 2025 年 3 月 30 日
-# 版权所有 (c) 2025 筱可 & 筱可AI研习社. 保留所有权利.
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
 
 from FlagEmbedding import BGEM3FlagModel
 import numpy as np
@@ -22,9 +8,7 @@ import os
 # 初始化BGE-M3模型
 # 请确保模型路径正确，如果模型未下载，FlagEmbedding库会自动下载
 
-model_path = r"C:\Users\k\Desktop\BaiduSyncdisk\baidu_sync_documents\hf_models\bge-m3" # 使用你的本地路径
-
-# model_path = 'BAAI/bge-m3' # 直接使用Hugging Face模型ID
+model_path = 'BAAI/bge-m3' # 直接使用Hugging Face模型ID
 try:
     model = BGEM3FlagModel(model_path, use_fp16=True) # 尝试使用FP16以节省内存和加速
 except Exception as e:
